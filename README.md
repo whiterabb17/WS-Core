@@ -1,4 +1,4 @@
-![Logo](WS-Core_logo.png)
+![Logo](https://raw.githubusercontent.com/sta/websocket-sharp/master/websocket-sharp_logo.png)
 
 ## Welcome to WS-Core
 ## Slightly modified WebSocket-Sharp | ported to DotNet6
