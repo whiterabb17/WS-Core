@@ -1,4 +1,4 @@
-![Logo](websocket-sharp_logo.png)
+![Logo](https://raw.githubusercontent.com/sta/websocket-sharp/master/websocket-sharp_logo.png)
 
 ## Welcome to websocket-sharp! ##
 
