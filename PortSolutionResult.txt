@@ -1,0 +1,196 @@
+==========
+References
+==========
+WebSocketSharp
+System
+System.IO
+System.IO.Compression
+System.Collections.Generic
+System.Text
+System.Collections.Specialized
+WebSocketSharp.Net
+System.Net
+System.Net.Sockets
+System.Threading
+System.Linq
+System.Diagnostics
+System.Reflection
+System.Security.Cryptography
+System.Security.Principal
+System.Globalization
+System.Net.Security
+System.Security.Cryptography.X509Certificates
+System.Security.Authentication
+System.Collections
+System.Runtime.Serialization
+System.Security.Permissions
+WebSocketSharp.Net.WebSockets
+System.ComponentModel
+System.Runtime.InteropServices
+WebSocketSharp.Server
+System.Timers
+project.all
+Example
+WSAServer
+System.Configuration
+
+===============
+DownloadedFiles
+===============
+project.all.json
+system.configuration.json
+system.collections.specialized.json
+
+==============
+ProjectResults
+==============
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\AWSClient\AWSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSClient\WSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSAServer\WSServer.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\websocket-sharp\websocket-sharp.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSAServer\WSServer.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSClient\WSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\AWSClient\AWSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\websocket-sharp\websocket-sharp.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+
+===========
+BuildErrors
+===========
+
+
