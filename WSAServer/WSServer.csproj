@@ -1,18 +1,28 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;Debug_Linux;Release_Linux</Configurations>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+  </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\websocket-sharp\WS-Core.csproj" />
+    <ProjectReference Include="..\websocket-sharp\websocket-sharp.csproj" />
   </ItemGroup>
-  <ItemGroup Label="PortingInfo">
-  <!-- DO NOT REMOVE WHILE PORTING
-  C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll
-  C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Configuration.dll
-  C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll
-  C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll
-  -->
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

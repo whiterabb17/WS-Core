@@ -30,22 +30,23 @@ System.Runtime.InteropServices
 WebSocketSharp.Server
 System.Timers
 project.all
-Example
+WSClient
 WSAServer
 System.Configuration
+WSAdmin
 
 ===============
 DownloadedFiles
 ===============
-project.all.json
 system.configuration.json
+project.all.json
 system.collections.specialized.json
 
 ==============
 ProjectResults
 ==============
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\AWSClient\AWSClient.csproj
+Showing results for: E:\DarkOracle2\Winux\WSClient\WSClient.csproj
 ----------------------
 ---------------------------
 Target Versions:
@@ -63,7 +64,7 @@ Action packages:
 ---------------------------
 
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSClient\WSClient.csproj
+Showing results for: E:\DarkOracle2\Winux\AWSClient\AWSClient.csproj
 ----------------------
 ---------------------------
 Target Versions:
@@ -81,7 +82,7 @@ Action packages:
 ---------------------------
 
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSAServer\WSServer.csproj
+Showing results for: E:\DarkOracle2\Winux\WSAServer\WSServer.csproj
 ----------------------
 ---------------------------
 Target Versions:
@@ -99,7 +100,7 @@ Action packages:
 ---------------------------
 
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\websocket-sharp\websocket-sharp.csproj
+Showing results for: E:\DarkOracle2\Winux\websocket-sharp\websocket-sharp.csproj
 ----------------------
 ---------------------------
 Target Versions:
@@ -117,7 +118,7 @@ Action packages:
 ---------------------------
 
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSAServer\WSServer.csproj
+Showing results for: E:\DarkOracle2\Winux\WSClient\WSClient.csproj
 ----------------------
 ---------------------------
 Target Versions:
@@ -135,7 +136,7 @@ Action packages:
 ---------------------------
 
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\WSClient\WSClient.csproj
+Showing results for: E:\DarkOracle2\Winux\WSAServer\WSServer.csproj
 ----------------------
 ---------------------------
 Target Versions:
@@ -153,7 +154,7 @@ Action packages:
 ---------------------------
 
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\AWSClient\AWSClient.csproj
+Showing results for: E:\DarkOracle2\Winux\websocket-sharp\websocket-sharp.csproj
 ----------------------
 ---------------------------
 Target Versions:
@@ -171,7 +172,7 @@ Action packages:
 ---------------------------
 
 ----------------------
-Showing results for: C:\Users\scott\OneDrive\Desktop\WSCore\websocket-sharp\websocket-sharp.csproj
+Showing results for: E:\DarkOracle2\Winux\AWSClient\AWSClient.csproj
 ----------------------
 ---------------------------
 Target Versions:

@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <Configurations>Debug;Release;Debug_Linux;Release_Linux</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\websocket-sharp\WS-Core.csproj" />
+    <ProjectReference Include="..\websocket-sharp\websocket-sharp.csproj" />
   </ItemGroup>
   <ItemGroup Label="PortingInfo">
   <!-- DO NOT REMOVE WHILE PORTING
-  C:\Windows\Microsoft.NET\Framework\v2.0.50727\mscorlib.dll
-  C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\v3.5\System.Core.dll
-  C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll
+  C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll
+  C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll
+  C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll
   -->
   </ItemGroup>
 </Project>

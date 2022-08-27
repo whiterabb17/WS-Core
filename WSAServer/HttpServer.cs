@@ -1,15 +1,41 @@
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using WebSocketSharp;
 using WebSocketSharp.Net;
 using WebSocketSharp.Server;
+using WSServer;
+using WSServer.Properties;
 
 namespace WSAServer
 {
     internal class HttpServerClass
     {
+        private static void RTC()
+        {
+            CFManager.ReadAllSettings();
+            string _drp = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "wwwroot");
+            string _drpj = System.IO.Path.Combine(_drp, "Js");
+            string _drpi = System.IO.Path.Combine(_drp, "index.html");
+            string _drpjs = System.IO.Path.Combine(_drpj, "echotest.js");
+            string _crp = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "certs");
+            if (!System.IO.Directory.Exists(_drp))
+            { 
+                System.IO.Directory.CreateDirectory(_drp);
+                if (!System.IO.File.Exists(_drpi))
+                    System.IO.File.WriteAllText(_drpi, Resources.index);
+                if (!System.IO.Directory.Exists(_drpj))
+                    System.IO.Directory.CreateDirectory(_drpj);
+                if (!System.IO.File.Exists(_drpjs))
+                    System.IO.File.WriteAllText(_drpjs, Resources.echo);
+            }
+            if (!System.IO.Directory.Exists(_crp))
+                System.IO.Directory.CreateDirectory(_crp);
+            CFManager.AddUpdateAppSettings("DocumentRootPath", _drp);
+            CFManager.AddUpdateAppSettings("CertFilePath", _crp);
+        }
         public static void HtRuntime()
         {
             var httpsv = new HttpServer(4649);
@@ -78,7 +104,9 @@ namespace WSAServer
             // To resolve to wait for socket in TIME_WAIT state.
             httpsv.ReuseAddress = true;
             // Set the document root path.
-            httpsv.DocumentRootPath = $"C:\\Users\\{Environment.UserName}\\Documents";//ConfigurationManager.Configuration.GetSection("appSettings")["DocumentRootPath"];
+            RTC();
+            var appSettings = ConfigurationManager.AppSettings;
+            httpsv.DocumentRootPath = appSettings["DocumentRoot"];
             // Set the HTTP GET request event.
             httpsv.OnGet += (sender, e) =>
             {
@@ -144,7 +172,7 @@ namespace WSAServer
             // Add the WebSocket service with initializing.
             httpsv.AddWebSocketService<Chat>("/SAPI", s =>
             {
-                s.Prefix = "Server#";
+                //s.Prefix = "Server#";
                 // To send the Sec-WebSocket-Protocol header that has a subprotocol name.
                 s.Protocol = "chat";
                 // To ignore the Sec-WebSocket-Extensions header.
@@ -165,7 +193,7 @@ namespace WSAServer
                     // the client with 'res' if necessary.
                     foreach (var cookie in req)
                     {
-                        if (cookie.ToString().EndsWith("#"))
+                        if (cookie.ToString().Contains("Admin") || cookie.ToString().Contains("Client"))
                             s.Prefix = cookie.ToString();
                         cookie.Expired = true;
                         res.Add(cookie);

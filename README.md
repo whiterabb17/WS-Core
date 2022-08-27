@@ -1,9 +1,8 @@
 ![Logo](https://raw.githubusercontent.com/sta/websocket-sharp/master/websocket-sharp_logo.png)
 
-## Welcome to WS-Core
-## Slightly modified WebSocket-Sharp | ported to DotNet6
+## Welcome to websocket-sharp! ##
 
-WS-Core | WebSocket-Sharp supports:
+websocket-sharp supports:
 
 - [RFC 6455](#supported-websocket-specifications)
 - [WebSocket Client](#websocket-client) and [Server](#websocket-server)
@@ -14,21 +13,64 @@ WS-Core | WebSocket-Sharp supports:
 - [Connecting through the HTTP proxy server](#connecting-through-the-http-proxy-server)
 - .NET Framework **3.5** or later (includes compatible environment such as [Mono])
 
+## Branches ##
+
+- [master] for production releases.
+- [hybi-00] for older [draft-ietf-hybi-thewebsocketprotocol-00]. No longer maintained.
+- [draft75] for even more old [draft-hixie-thewebsocketprotocol-75]. No longer maintained.
+
 ## Build ##
 
-WS-Core is built as a single assembly, **WS-Core.dll**.
+websocket-sharp is built as a single assembly, **websocket-sharp.dll**.
 
-WS-Core is developed with [MonoDevelop]. So a simple way to build is to open **WS-Core.sln** and run build for **WS-Core project** with any of the build configurations (e.g. `Debug`) in MonoDevelop.
+websocket-sharp is developed with [MonoDevelop]. So a simple way to build is to open **websocket-sharp.sln** and run build for **websocket-sharp project** with any of the build configurations (e.g. `Debug`) in MonoDevelop.
+
+## Install ##
+
+### Self Build ###
+
+You should add your websocket-sharp.dll (e.g. `/path/to/websocket-sharp/bin/Debug/websocket-sharp.dll`) to the library references of your project.
+
+If you would like to use that dll in your [Unity] project, you should add it to any folder of your project (e.g. `Assets/Plugins`) in the **Unity Editor**.
+
+### NuGet Gallery ###
+
+websocket-sharp is available on the [NuGet Gallery], as still a **prerelease** version.
+
+- [NuGet Gallery: websocket-sharp]
+
+You can add websocket-sharp to your project with the NuGet Package Manager, by using the following command in the Package Manager Console.
+
+    PM> Install-Package WebSocketSharp -Pre
+
+### Unity Asset Store ###
+
+websocket-sharp is available on the Unity Asset Store (Sorry, Not available now).
+
+- [WebSocket-Sharp for Unity]
+
+It works with **Unity Free**, but there are some limitations:
+
+- [Security Sandbox of the Webplayer] (The server is not available in Web Player)
+- [WebGL Networking] (Not available in WebGL)
+- Incompatible platform (Not available for such UWP)
+- Lack of dll for the System.IO.Compression (The compression extension is not available on Windows)
+- .NET Socket Support for iOS/Android (iOS/Android Pro is required if your Unity is earlier than Unity 5)
+- .NET API 2.0 compatibility level for iOS/Android
+
+.NET API 2.0 compatibility level for iOS/Android may require to fix lack of some features for later than .NET Framework 2.0, such as the `System.Func<...>` delegates (so i have added them in the asset package).
+
+And it is priced at **US$15**. I believe your $15 makes this project more better, **Thank you!**
 
 ## Usage ##
 
-### WS-Core Client ###
+### WebSocket Client ###
 
 ```csharp
 using System;
 using WebSocketSharp;
 
-namespace WSClient
+namespace Example
 {
   public class Program
   {
@@ -221,14 +263,14 @@ You can use the `WebSocket.Close ()`, `WebSocket.Close (ushort)`, `WebSocket.Clo
 
 If you would like to close the connection asynchronously, you should use the `WebSocket.CloseAsync` method.
 
-### WS-Core Server ###
+### WebSocket Server ###
 
 ```csharp
 using System;
 using WebSocketSharp;
 using WebSocketSharp.Server;
 
-namespace WSAServer
+namespace Example
 {
   public class Laputa : WebSocketBehavior
   {
@@ -374,7 +416,7 @@ wssv.Stop ();
 
 I have modified the `System.Net.HttpListener`, `System.Net.HttpListenerContext`, and some other classes from **[Mono]** to create an HTTP server that allows to accept the WebSocket handshake requests.
 
-So WS-Core provides the `WebSocketSharp.Server.HttpServer` class.
+So websocket-sharp provides the `WebSocketSharp.Server.HttpServer` class.
 
 You can add any WebSocket service to your `HttpServer` with the specified behavior and path to the service, by using the `HttpServer.AddWebSocketService<TBehavior> (string)` or `HttpServer.AddWebSocketService<TBehavior> (string, Action<TBehavior>)` method.
 
@@ -392,7 +434,7 @@ For more information, would you see **[Example3]**?
 
 #### Per-message Compression ####
 
-WS-Core supports the [Per-message Compression][rfc7692] extension (but does not support it with the [context take over]).
+websocket-sharp supports the [Per-message Compression][rfc7692] extension (but does not support it with the [context take over]).
 
 As a WebSocket client, if you would like to enable this extension, you should set the `WebSocket.Compression` property to a compression method before calling the connect method.
 
@@ -425,7 +467,7 @@ I think this is useful when you get something error in connecting the server and
 
 ### Secure Connection ###
 
-WS-Core supports the secure connection with **SSL/TLS**.
+websocket-sharp supports the secure connection with **SSL/TLS**.
 
 As a WebSocket client, you should create a new instance of the `WebSocket` class with a **wss** scheme WebSocket URL.
 
@@ -458,7 +500,7 @@ wssv.SslConfiguration.ServerCertificate = new X509Certificate2 (
 
 ### HTTP Authentication ###
 
-WS-Core supports the [HTTP Authentication (Basic/Digest)][rfc2617].
+websocket-sharp supports the [HTTP Authentication (Basic/Digest)][rfc2617].
 
 As a WebSocket client, you should set a pair of user name and password for the HTTP authentication, by using the `WebSocket.SetCredentials (string, string, bool)` method before calling the connect method.
 
@@ -563,7 +605,7 @@ wssv.AddWebSocketService<Chat> (
 
 ### Connecting through the HTTP proxy server ###
 
-WS-Core supports to connect through the HTTP proxy server.
+websocket-sharp supports to connect through the HTTP proxy server.
 
 If you would like to connect to a WebSocket server through the HTTP proxy server, you should set the proxy server URL, and if necessary, a pair of user name and password for the proxy server authentication (Basic/Digest), by using the `WebSocket.SetProxy (string, string, string)` method before calling the connect method.
 
@@ -603,7 +645,7 @@ The `WebSocketServer` and `HttpServer` classes have the same logging function.
 
 ## Examples ##
 
-Examples using WS-Core.
+Examples using websocket-sharp.
 
 ### Example ###
 
@@ -621,7 +663,7 @@ Would you access to [http://localhost:4649](http://localhost:4649) to do **WebSo
 
 ## Supported WebSocket Specifications ##
 
-WS-Core supports **RFC 6455**, and it is based on the following references:
+websocket-sharp supports **RFC 6455**, and it is based on the following references:
 
 - [The WebSocket Protocol][rfc6455]
 - [The WebSocket API][api]
@@ -634,32 +676,32 @@ Thanks for translating to japanese.
 
 ## License ##
 
-WS-Core is provided under [The MIT License].
+websocket-sharp is provided under [The MIT License].
 
 
-[Example]: https://github.com/sta/WS-Core/tree/master/Example
-[Example2]: https://github.com/sta/WS-Core/tree/master/Example2
-[Example3]: https://github.com/sta/WS-Core/tree/master/Example3
+[Example]: https://github.com/sta/websocket-sharp/tree/master/Example
+[Example2]: https://github.com/sta/websocket-sharp/tree/master/Example2
+[Example3]: https://github.com/sta/websocket-sharp/tree/master/Example3
 [Mono]: http://www.mono-project.com
 [MonoDevelop]: http://monodevelop.com
 [NuGet Gallery]: http://www.nuget.org
-[NuGet Gallery: WS-Core]: http://www.nuget.org/packages/WebSocketSharp
+[NuGet Gallery: websocket-sharp]: http://www.nuget.org/packages/WebSocketSharp
 [Origin]: http://tools.ietf.org/html/rfc6454#section-7
 [Query]: http://tools.ietf.org/html/rfc3986#section-3.4
 [Security Sandbox of the Webplayer]: http://docs.unity3d.com/Manual/SecuritySandbox.html
 [Squid]: http://www.squid-cache.org
-[The MIT License]: https://raw.github.com/sta/WS-Core/master/LICENSE.txt
+[The MIT License]: https://raw.github.com/sta/websocket-sharp/master/LICENSE.txt
 [Unity]: http://unity3d.com
 [WebGL Networking]: http://docs.unity3d.com/Manual/webgl-networking.html
-[WS-Core for Unity]: http://u3d.as/content/sta-blockhead/WS-Core-for-unity
+[WebSocket-Sharp for Unity]: http://u3d.as/content/sta-blockhead/websocket-sharp-for-unity
 [api]: http://www.w3.org/TR/websockets
 [api_ja]: http://www.hcn.zaq.ne.jp/___/WEB/WebSocket-ja.html
 [context take over]: https://datatracker.ietf.org/doc/html/rfc7692#section-7.1.1
 [draft-hixie-thewebsocketprotocol-75]: http://tools.ietf.org/html/draft-hixie-thewebsocketprotocol-75
 [draft-ietf-hybi-thewebsocketprotocol-00]: http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-00
-[draft75]: https://github.com/sta/WS-Core/tree/draft75
-[hybi-00]: https://github.com/sta/WS-Core/tree/hybi-00
-[master]: https://github.com/sta/WS-Core/tree/master
+[draft75]: https://github.com/sta/websocket-sharp/tree/draft75
+[hybi-00]: https://github.com/sta/websocket-sharp/tree/hybi-00
+[master]: https://github.com/sta/websocket-sharp/tree/master
 [rfc2617]: http://tools.ietf.org/html/rfc2617
 [rfc6455]: http://tools.ietf.org/html/rfc6455
 [rfc6455_ja]: http://www.hcn.zaq.ne.jp/___/WEB/RFC6455-ja.html

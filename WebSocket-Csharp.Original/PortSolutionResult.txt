@@ -1,0 +1,198 @@
+==========
+References
+==========
+WebSocketSharp
+System.IO
+System.IO.Compression
+System
+System.Collections.Generic
+System.Text
+System.Collections.Specialized
+WebSocketSharp.Net
+System.Net
+System.Net.Sockets
+WebSocketSharp.Net.WebSockets
+System.Threading
+System.Security.Cryptography
+System.Collections
+System.Net.Security
+WebSocketSharp.Server
+System.Security.Principal
+System.Runtime.InteropServices
+System.Globalization
+System.Runtime.Serialization
+System.Security.Permissions
+System.Security.Cryptography.X509Certificates
+System.ComponentModel
+System.Diagnostics
+System.Reflection
+System.Timers
+System.Linq
+System.Security.Authentication
+System.Runtime.CompilerServices
+project.all
+WSClient
+WSAServer
+System.Configuration
+WSAdmin
+
+===============
+DownloadedFiles
+===============
+system.configuration.json
+project.all.json
+system.collections.specialized.json
+
+==============
+ProjectResults
+==============
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\AWSClient\AWSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\WSAServer\WSServer.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\WSClient\WSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\websocket-sharp\websocket-sharp.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\AWSClient\AWSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\websocket-sharp\websocket-sharp.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\WSAServer\WSServer.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: E:\DarkOracle2\WS-Core\websocket-sharp\WSClient\WSClient.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+
+===========
+BuildErrors
+===========
+
+
